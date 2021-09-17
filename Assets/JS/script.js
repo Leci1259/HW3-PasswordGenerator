@@ -1,12 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// password object
-var wPassword = {
-  length:0,
-
-
-}
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -20,7 +14,7 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 //Password Generator Function
-function myFunction()  {
+function generatePassword()  {
   //Password length 
   var passSizeInfo = window.prompt("Type a Password Length between 8-128 characters");
   if (!passSizeInfo) {
@@ -32,6 +26,7 @@ function myFunction()  {
   }
   else {
     var pass = [];
+    var passNum = parseInt(passSizeInfo);
   }
   //Password criteria 
   var wantLow = window.confirm("Do you want to include lowercase?");
@@ -47,7 +42,7 @@ function myFunction()  {
 
   //Loop to construct password
   
-while (pass.length !== passSizeInfo) {
+while (pass.length !== passNum) {
 
   //Adds lowercase letter if it was selected
    if (wantLow){
@@ -58,6 +53,7 @@ while (pass.length !== passSizeInfo) {
 
         var lowerCase= getRandomLC();
         pass.push (lowerCase);
+        console.log(pass);
    }
 
    //Adds Uppercase letter if selected
@@ -69,6 +65,7 @@ while (pass.length !== passSizeInfo) {
 
         var UpperCase = getRandomUC();
         pass.push(UpperCase);
+        console.log(pass);
    }
 
    //Add Num if selected
@@ -80,6 +77,7 @@ while (pass.length !== passSizeInfo) {
 
       var NumVal = getRandomNum();
       pass.push(NumVal);
+      console.log(pass);
   }
   // Add Special if selected
   if (wantSpe) {
@@ -90,10 +88,12 @@ while (pass.length !== passSizeInfo) {
 
       var SpeVal =getRandomSpe();
       pass.push(SpeVal);
+      console.log(pass);
   }
    }
+   var final = pass.join('');
 
-   window.alert(pass);
+   return(final);
 }
 
 
