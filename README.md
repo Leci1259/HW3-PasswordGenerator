@@ -37,7 +37,7 @@ THEN the password is either displayed in an alert or written to the page
 10. Look over code again for possible errors
 
 ## Website Preview
-![Website Image.](C:\Users\shayn\Desktop\HW3-PasswordGenerator\Assets\Img\SS.jpg)
+![Website Image.](.\Assets\Img\SS.jpg)
 
 
 ## Website Link
